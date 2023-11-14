@@ -1,0 +1,156 @@
+@media screen and (min-width: 991px) {
+    .hamburger-icon-holder{
+        display: none;
+    }
+    .d-l-none{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .packages-holder{
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 1119px) {
+    .benefit-title{
+        max-height: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header{
+        overflow: hidden;
+    }
+    .header-nav-list{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        right: -100vw;
+        top: 68px;
+        height: unset;
+        background-color: black;
+        transition: right .5s;
+        width: 30vw;
+        height: calc(100vh - 68px);
+        overflow-y: auto;
+    }
+    header.nav-open{
+        overflow: unset;
+    }
+    header.nav-open .header-nav-list{
+        right: 0
+    }
+    .header-nav-list li a{
+        padding: 12px;
+    }
+    .benefit{
+        flex: 0 0 calc(50% - 24px);
+        max-width: calc(50% - 24px);
+    }
+    .benefit-title{
+        max-height: unset;
+        height: unset;
+    }
+    .section-title{
+        white-space: unset;
+        display: flex;
+        justify-content: center;
+    }
+    .section-title::before,
+    .section-title::after{
+        display: none;
+    }
+    .hero-content{
+        padding: 0 20px;
+        width: calc(100% - 40px);
+    }
+    .who-are-we .section-content{
+        flex-direction: column;
+    }
+    .who-are-we-text.left,
+    .who-are-we-img-holder,
+    .team-photo,
+    .who-are-we-text.right{
+        flex: 1 1 100%;
+        max-width: unset;
+        margin-left: unset;
+        margin-right: unset;
+    }
+    .team-photo{
+        order: 1;
+    }
+    .who-are-we-img-holder,
+    .team-photo{
+        max-width: 50%;
+        justify-content: center;
+        margin: 24px 0
+    }
+    .services {
+        flex: 0 0 calc(85% - 24px);
+        max-width: calc(85% - 24px);
+    }
+    .plan {
+        flex: 0 0 calc(15% - 24px);
+        max-width: calc(15% - 24px);
+        display: none;
+    }
+    .kickstart .plan-kickstart,
+    .basic .plan-basic,
+    .full .plan-full,
+    .executive .plan-executive{
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .benefit{
+        flex: 0 0 calc(100% - 24px);
+        max-width: calc(100% - 24px);
+    }
+    .hero-content p{
+        font-size: 28px;
+    }
+    .benefits-holder{
+        justify-content: center;
+    }
+    .benefit{
+        flex: 0 0 calc(100% - 12px);
+        max-width: calc(100% - 12px);
+        padding: 12px 0;
+    }
+    .who-are-we-img-holder,
+    .team-photo{
+        max-width: 75%
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header{
+        padding: 0 24px;
+    }
+    .header-nav-list{
+        width: 100vw;
+    }
+    .section{
+        padding: 12px;
+    }
+    .section.hero{
+        min-height: calc(100vh - 92px);
+    }
+    .hero-content p{
+        font-size: 22px;
+    }
+    .who-are-we-img-holder,
+    .team-photo{
+        max-width: 100%
+    }
+}
