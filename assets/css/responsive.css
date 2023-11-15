@@ -2,155 +2,102 @@
     .hamburger-icon-holder{
         display: none;
     }
-    .d-l-none{
-        display: none;
-    }
 }
 
-@media screen and (max-width: 1260px) {
-    .packages-holder{
-        max-width: 85%;
-    }
-}
-
-@media screen and (max-width: 1119px) {
-    .benefit-title{
-        max-height: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+@media screen and (max-width: 1190px) {
+    .benefits h1{
+        font-size: 48px;
     }
 }
 
 @media screen and (max-width: 991px) {
-    header{
-        overflow: hidden;
-    }
     .header-nav-list{
         position: absolute;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        right: -100vw;
+        right: 0;
         top: 68px;
         height: unset;
         background-color: black;
-        transition: right .5s;
         width: 30vw;
-        height: calc(100vh - 68px);
         overflow-y: auto;
     }
     header.nav-open{
         overflow: unset;
     }
     header.nav-open .header-nav-list{
-        right: 0
+        display: block
     }
     .header-nav-list li a{
         padding: 12px;
     }
-    .benefit{
-        flex: 0 0 calc(50% - 24px);
-        max-width: calc(50% - 24px);
+    .hero-content h1{
+        font-size: 48px;
     }
-    .benefit-title{
-        max-height: unset;
-        height: unset;
-    }
-    .section-title{
-        white-space: unset;
-        display: flex;
-        justify-content: center;
-    }
-    .section-title::before,
-    .section-title::after{
-        display: none;
-    }
-    .hero-content{
-        padding: 0 20px;
-        width: calc(100% - 40px);
-    }
-    .who-are-we .section-content{
-        flex-direction: column;
-    }
-    .who-are-we-text.left,
-    .who-are-we-img-holder,
-    .team-photo,
-    .who-are-we-text.right{
-        flex: 1 1 100%;
-        max-width: unset;
-        margin-left: unset;
-        margin-right: unset;
-    }
-    .team-photo{
-        order: 1;
-    }
-    .who-are-we-img-holder,
-    .team-photo{
-        max-width: 50%;
-        justify-content: center;
-        margin: 24px 0
-    }
-    .services {
-        flex: 0 0 calc(85% - 24px);
-        max-width: calc(85% - 24px);
-    }
-    .plan {
-        flex: 0 0 calc(15% - 24px);
-        max-width: calc(15% - 24px);
-        display: none;
-    }
-    .kickstart .plan-kickstart,
-    .basic .plan-basic,
-    .full .plan-full,
-    .executive .plan-executive{
-        display: flex;
-    }
-
-}
-
-@media screen and (max-width: 768px){
-    .benefit{
-        flex: 0 0 calc(100% - 24px);
-        max-width: calc(100% - 24px);
-    }
-    .hero-content p{
-        font-size: 28px;
+    .benefits h1{
+        font-size: 45px;
     }
     .benefits-holder{
         justify-content: center;
     }
-    .benefit{
-        flex: 0 0 calc(100% - 12px);
-        max-width: calc(100% - 12px);
-        padding: 12px 0;
+    .benefit {
+        flex: 0 0 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+        margin: 20px
     }
-    .who-are-we-img-holder,
-    .team-photo{
-        max-width: 75%
+}
+
+@media screen and (max-width: 768px){
+    .hero-content h1{
+        font-size: 32px;
+    }
+    .benefits h1{
+        font-size: 33px;
+    }
+    .benefit {
+        flex: 0 0 calc(100% - 40px);
+        max-width: calc(100% - 40px);
+        margin: 20px 0
     }
 }
 
 @media screen and (max-width: 576px) {
     header{
-        padding: 0 24px;
+        padding: 0;
     }
     .header-nav-list{
         width: 100vw;
     }
-    .section{
-        padding: 12px;
+    .hero-content .hero-btn:nth-child(odd){
+        margin-bottom: 15px;
     }
-    .section.hero{
-        min-height: calc(100vh - 92px);
+
+    .hero-content .hero-btn{
+        max-width: 50%;
+        white-space: nowrap;
     }
-    .hero-content p{
-        font-size: 22px;
+    .logo-text-holder{
+        padding-left: 8px;
     }
-    .who-are-we-img-holder,
-    .team-photo{
-        max-width: 100%
+    .logo-text-holder p{
+        font-size: 8px;
+    }
+    .benefits h1{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .hero-content h1{
+        font-size: 23px;
+    }
+    .hero-content .hero-btn{
+        max-width: unset;
+        min-width: 200px;
+    }
+    .benefits h1{
+        font-size: 17px;
     }
 }
