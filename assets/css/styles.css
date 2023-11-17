@@ -380,11 +380,7 @@ header{
 .full-opened .full .inquire-button,
 .executive-opened .executive .inquire-button,
 .plan-back-button,
-.expanded-content,
-.kickstart-opened .collapsed-content,
-.basic-opened .collapsed-content,
-.full-opened .collapsed-content,
-.executive-opened .collapsed-content{
+.expanded-content{
     display: none;
 }
 .kickstart-opened .kickstart .plan-back-button,
