@@ -4,8 +4,8 @@ const hamburger = document.getElementById("hamburger");
 const currlang = document.getElementById("curr-lang");
 const langList = document.getElementById("languages-list");
 const currLangFlag = document.getElementById("curr-lang-flag");
-const enLang = document.getElementById("en-lang");
-const beLang = document.getElementById("be-lang");
+// const enLang = document.getElementById("en-lang");
+// const beLang = document.getElementById("be-lang");
 const navItems = Array.from(document.getElementsByClassName("nav-list-item"));
 const closeNav = navItems.map(item => {
   item.addEventListener("click", () => {
@@ -25,18 +25,18 @@ const toggleMobileMenu = () => {
     }
 }
 
-enLang.addEventListener("click", () => {
-  currLangFlag.src = "images/flags/engl-flag.svg"
-})
+// enLang.addEventListener("click", () => {
+//   currLangFlag.src = "images/flags/engl-flag.svg"
+// })
 
-beLang.addEventListener("click", () => {
-  currLangFlag.src = "images/flags/belg-flag.svg"
-})
+// beLang.addEventListener("click", () => {
+//   currLangFlag.src = "images/flags/belg-flag.svg"
+// })
 
-const toggleLangDropdown = () => {currlang.classList.toggle("expanded");}
+// const toggleLangDropdown = () => {currlang.classList.toggle("expanded");}
 
 hamburger.addEventListener("click", toggleMobileMenu);
-currlang.addEventListener("click", toggleLangDropdown);
+// currlang.addEventListener("click", toggleLangDropdown);
 
 // Scroll-Up button functionality
 const scrollToTopButton = document.getElementById('scrollToTopButton');
