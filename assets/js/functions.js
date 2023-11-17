@@ -4,19 +4,20 @@ const hamburger = document.getElementById("hamburger");
 const currlang = document.getElementById("curr-lang");
 const langList = document.getElementById("languages-list");
 const currLangFlag = document.getElementById("curr-lang-flag");
+const hamburgerIconSrc = "images/icons/hamburger-icon.svg";
+const closeIconSrc = "images/icons/close-icon.svg";
 // const enLang = document.getElementById("en-lang");
 // const beLang = document.getElementById("be-lang");
 const navItems = Array.from(document.getElementsByClassName("nav-list-item"));
 const closeNav = navItems.map(item => {
   item.addEventListener("click", () => {
     header.classList.remove("nav-open");
+    hamburger.src = hamburgerIconSrc;
   })
 });
 
 const toggleMobileMenu = () => {
     header.classList.toggle("nav-open");
-    const hamburgerIconSrc = "images/icons/hamburger-icon.svg";
-    const closeIconSrc = "images/icons/close-icon.svg";
     
     if (hamburger.src.includes(hamburgerIconSrc)) {
         hamburger.src = closeIconSrc;
