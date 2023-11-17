@@ -65,6 +65,7 @@ h1{
     width: 100vw;
     height: 100vh;
     z-index: -1;
+    object-fit: cover;
 }
 header{
     display: flex;
@@ -333,6 +334,7 @@ header{
     width: 100%;
     height: 100%;
     z-index: -1;
+    object-fit: cover;
 }   
 .plans-holder{
     display: flex;
@@ -349,6 +351,7 @@ header{
     background-color: #ffffff;
     padding: 12px;
     align-items: center;
+    min-height: calc(50% - 40px);
 }
 .plan h3{
     color: var(--c-primary-b);
@@ -360,11 +363,73 @@ header{
     text-align: center;
     font-size: 18px;
 }
-.plan a{
+.plan .inquire-button,
+.plan .plan-back-button{
     color: var(--c-primary);
     text-decoration: underline;
     margin: 20px 0;
+    cursor: pointer;
+    margin-top: auto;
 }
+.kickstart-opened .plan:not(.kickstart),
+.basic-opened .plan:not(.basic),
+.full-opened .plan:not(.full),
+.executive-opened .plan:not(.executive),
+.kickstart-opened .kickstart .inquire-button,
+.basic-opened .basic .inquire-button,
+.full-opened .full .inquire-button,
+.executive-opened .executive .inquire-button,
+.plan-back-button,
+.expanded-content,
+.kickstart-opened .collapsed-content,
+.basic-opened .collapsed-content,
+.full-opened .collapsed-content,
+.executive-opened .collapsed-content{
+    display: none;
+}
+.kickstart-opened .kickstart .plan-back-button,
+.basic-opened .basic .plan-back-button,
+.full-opened .full .plan-back-button,
+.executive-opened .executive .plan-back-button,
+.kickstart-opened .expanded-content,
+.basic-opened .expanded-content,
+.full-opened .expanded-content,
+.executive-opened .expanded-content{
+    display: block
+}
+.kickstart-opened .kickstart,
+.basic-opened .basic,
+.full-opened .full,
+.executive-opened .executive{
+    flex: 1 1 100%;
+    max-width: unset;
+}
+.expanded-content ul{
+    font-size: 26px;
+    list-style-type: disclosure-closed;
+    color: var(--c-primary);
+    padding-left: 20px;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 12px;
+}
+.expanded-content ul::-webkit-scrollbar{
+    background-color: var(--c-primary-b);
+    width: 8px;
+    border-radius: 8px;
+}
+.expanded-content ul::-webkit-scrollbar-thumb{
+    background-color: var(--c-primary);
+    border-radius: 8px;
+    width: 8px;
+}
+.plan .plan-price{
+    font-size: 24px;
+    margin-top: 24px;
+    color: var(--c-primary-b);
+    font-weight: bold;
+}
+
 
 /* Services Section */
 .section-services{
@@ -440,13 +505,13 @@ header{
     width: 100%;
     height: 100%;
     z-index: -1;
+    object-fit: cover;
 }
 .contact-form-holder{
     max-width: 40%;
     margin: 0 auto 24px;
 }
 .contact-form-holder h1{
-    max-width: 90%;
     font-size: 64px;
     font-style: oblique;
     color: var(--c-text-white);
@@ -512,6 +577,51 @@ header{
 .footer-part-text:hover{
     color: var(--c-primary-b);
 }
+
+/* Email messages */
+.email-handler{
+    min-height: 100vh;
+    height: 100vh;  
+  }
+  
+  .email-message-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 40px;
+  }
+  .success .email-message{
+    font-size: 26px;
+    color: greenyellow;
+  }
+  .fail .email-message{
+    font-size: 26px;
+    color: #ea4655;
+  }
+  .email-message-link{
+    padding: 10px;
+    border: 1px solid #ffffff;
+    font-size: 18px;
+  }
+  .email-alert{
+    font-size: 16px;
+    margin-top: 10px;
+    font-style: italic;
+    color: #cccccc;
+  }
+  .email-handler-holder nav{
+    justify-content: center;
+  }
+  .email-alert a{
+    color:#ea4655;
+    text-decoration: underline;
+  }
 
 
 /* Scroll to top button*/

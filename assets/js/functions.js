@@ -6,6 +6,12 @@ const langList = document.getElementById("languages-list");
 const currLangFlag = document.getElementById("curr-lang-flag");
 const enLang = document.getElementById("en-lang");
 const beLang = document.getElementById("be-lang");
+const navItems = Array.from(document.getElementsByClassName("nav-list-item"));
+const closeNav = navItems.map(item => {
+  item.addEventListener("click", () => {
+    header.classList.remove("nav-open");
+  })
+});
 
 const toggleMobileMenu = () => {
     header.classList.toggle("nav-open");
@@ -53,46 +59,21 @@ window.addEventListener('scroll', () => {
 });
 
 
+// Inquire functionality
+const plansHolder = document.getElementById("plans-holder");
 
-// Expand dropdown on packages selector
-const currPackage = document.getElementById("current-package");
-
-// Toggle Class on dropdown label click
-currPackage.addEventListener("click",() => {
-  currPackage.classList.toggle("packages-expanded");
+const inquireButtons = Array.from(document.getElementsByClassName("inquire-button"));
+inquireButtons.map(item => {
+  item.addEventListener("click", () => {
+    const classValue = item.attributes.plan.value + "-opened";
+    plansHolder.classList.remove("kickstart-opened","basic-opened","full-opened","executive-opened")
+    plansHolder.classList.add(classValue);
+  })
 })
 
-// Remove class (Collapse dropdown) when clicked outside the dropdown
-document.addEventListener("click", e => {
-  if (e.target !== currPackage) {
-    currPackage.classList.remove("packages-expanded");
-  }
-});
-
-
-// Add class to the body depending on chosen package and remove other package classes
-
-  // Assign items to plans to variables
-  const kickstart = document.getElementById("kickstart");
-  const basic = document.getElementById("basic");
-  const full = document.getElementById("full");
-  const executive = document.getElementById("executive");
-
-  // Add plans to an array
-  const plans = [kickstart,basic,full,executive];
-
-  // Function when an item from the dropdown is clicked
-  const removePackClasses = (el) => {
-    body.classList.remove("kickstart","basic","full","executive");
-    currPackage.classList.remove("packages-expanded");
-    const elText = el.textContent.toLowerCase();
-    body.classList.add(elText);
-    currPackage.textContent = elText;
-  }
-
-  // Loop through plans and call the function when a plan is clicked
-  plans.forEach(item => {
-    item.addEventListener("click", () => {
-      removePackClasses(item);
-    });
-  });
+const planBackButton = Array.from(document.getElementsByClassName("plan-back-button"));
+planBackButton.map(item => {
+  item.addEventListener("click", () => {
+    plansHolder.classList.remove("kickstart-opened","basic-opened","full-opened","executive-opened")
+  })
+})

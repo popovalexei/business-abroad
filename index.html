@@ -28,10 +28,10 @@
             </div>
 
             <!-- Nav Links -->
-            <ul class="header-nav-list">
-                <li><a href="#benefits" data-i18n="aboutNav">About</a></li>
-                <li><a href="#packages" data-i18n="packagesAndPricingNav">Package & Pricing</a></li>
-                <li><a href="#contact-us" data-i18n="contactUsNav">Contact us</a></li>
+            <ul id="header-nav" class="header-nav-list">
+                <li class="nav-list-item"><a href="#benefits" data-i18n="aboutNav">About</a></li>
+                <li class="nav-list-item"><a href="#packages" data-i18n="packagesAndPricingNav">Package & Pricing</a></li>
+                <li class="nav-list-item"><a href="#contact-us" data-i18n="contactUsNav">Contact us</a></li>
             </ul>
             <div class="hamburger-icon-holder">
                 <img id="hamburger" class="hamburger-icon" src="images/icons/hamburger-icon.svg" alt="Hamburger Icon">
@@ -62,8 +62,8 @@
             <h1 class="t-center hero-title-bottom" data-i18n="heroTextBottom">business opportunities</h1>
 
             <!-- hero CTA buttons -->
-            <a href="#contact-form" class="hero-btn" data-i18n="heroBtn1">Start your journey</a>
-            <a href="#contact-form" class="hero-btn" data-i18n="heroBtn2">Explore business ideas</a>
+            <a href="#benefits" class="hero-btn" data-i18n="heroBtn1">Start your journey</a>
+            <a href="#packages" class="hero-btn" data-i18n="heroBtn2">Explore business ideas</a>
         </div>
     </section>
 
@@ -117,7 +117,7 @@
         <div class="packages-section-left">
             <h1 data-i18n="packagesTitle2"><span data-i18n="packagesTitle1">Our</span> Packages</h1>
             <p data-i18n="packagesTitleText">We offer a wide variety of packages for you to choose from</p>
-            <a href="" class="hero-btn" data-i18n="packagesTitleButton">Book a meeting</a>
+            <a href="https://outlook.office365.com/owa/calendar/ITConsult@locationterminal.lu/bookings/" class="hero-btn" data-i18n="packagesTitleButton" target="_blank">Book a meeting</a>
         </div>
 
         <!-- Right side -->
@@ -127,30 +127,98 @@
             <img class="package-section-background" src="./images/packages-background.png" alt="Rila Monastery">
 
             <!-- Plans cards -->
-            <div class="plans-holder">
+            <div id="plans-holder" class="plans-holder">
                 <!-- plan 1 -->
-                <div class="plan">
+                <div class="plan kickstart">
                     <h3 class="plan-title" data-i18n="planOneTitle">Kickstart</h3>
-                    <p data-i18n="planOneText">Connect with experts: kickstart your business.</p>
-                    <a href="" data-i18n="planOneInquire">Inquire ></a>
+                    <p class="collapsed-content" data-i18n="planOneText">Connect with experts: kickstart your business.</p>
+                    <p class="inquire-button" data-i18n="planOneInquire" plan="kickstart">Inquire ></p>
+                    <div class="expanded-content">
+                        <p>This plan includes:</p>
+                        <ul>
+                            <li>Bringing in contact with lawyer</li>
+                            <li>Bringing in contact with accountant</li>
+                            <li>Bringing in contact with HR</li>
+                        </ul>
+                        <p class="plan-price">€1000</p>
+                    </div>
+                    <p class="plan-back-button">< Back</p>
                 </div>
                 <!-- plan 2 -->
-                <div class="plan">
+                <div class="plan basic">
                     <h3 class="plan-title" data-i18n="planTwoTitle">Basic</h3>
                     <p data-i18n="planTwoText">Comprehensive business setup: choose the basic package.</p>
-                    <a href="" data-i18n="planTwoInquire">Inquire ></a>
+                    <p class="inquire-button" data-i18n="planTwoInquire" plan="basic">Inquire ></p>
+                    <div class="expanded-content">
+                        <p>This plan includes:</p>
+                        <ul>
+                            <li>Bringing in contact with lawyer</li>
+                            <li>Setting up company with lawyer</li>
+                            <li>Bringing in contact with accountant</li>
+                            <li>Bringing in contact with HR</li>
+                            <li>Contract with accountant</li>
+                            <li>Job interviews</li>
+                            <li>Opening bank account</li>
+                            <li>Vat registration</li>
+                            <li>Payroll services</li>
+                            <li>Guided trip</li>
+                        </ul>
+                        <p class="plan-price">€2000</p>
+                    </div>
+                    <p class="plan-back-button">< Back</p>
                 </div>
                 <!-- plan 3 -->
-                <div class="plan">
+                <div class="plan full">
                     <h3 class="plan-title" data-i18n="planThreeTitle">Full</h3>
                     <p data-i18n="planThreeText">All-inclusive business solutions: explore the full package.</p>
-                    <a href="" data-i18n="planThreeInquire">Inquire ></a>
+                    <p class="inquire-button" data-i18n="planThreeInquire" plan="full">Inquire ></p>
+                    <div class="expanded-content">
+                        <p>This plan includes:</p>
+                        <ul>
+                            <li>Bringing in contact with lawyer</li>
+                            <li>Setting up company with lawyer</li>
+                            <li>Bringing in contact with accountant</li>
+                            <li>Bringing in contact with HR</li>
+                            <li>Contract with accountant</li>
+                            <li>Job interviews</li>
+                            <li>Office space</li>
+                            <li>Opening bank account</li>
+                            <li>Vat registration</li>
+                            <li>Office material</li>
+                            <li>Payroll services</li>
+                            <li>Guided trip</li>
+                            <li>BGN tel number and website</li>
+                        </ul>
+                        <p class="plan-price">€3000</p>
+                    </div>
+                    <p class="plan-back-button">< Back</p>
                 </div>
                 <!-- plan 4 -->
-                <div class="plan">
+                <div class="plan executive">
                     <h3 class="plan-title" data-i18n="planFourTitle">Executive</h3>
                     <p data-i18n="planFourText">Premium business support: unlock executive benefits.</p>
-                    <a href="" data-i18n="planFourInquire">Inquire ></a>
+                    <p class="inquire-button" data-i18n="planFourInquire" plan="executive">Inquire ></p>
+                    <div class="expanded-content">
+                        <p>This plan includes:</p>
+                        <ul>
+                            <li>Bringing in contact with lawyer</li>
+                            <li>Setting up company with lawyer</li>
+                            <li>Bringing in contact with accountant</li>
+                            <li>Bringing in contact with HR</li>
+                            <li>Contract with accountant</li>
+                            <li>Job interviews</li>
+                            <li>Office space</li>
+                            <li>Opening bank account</li>
+                            <li>Managing, temp, the company</li>
+                            <li>Vat registration</li>
+                            <li>Office material</li>
+                            <li>Payroll services</li>
+                            <li>Guided trip</li>
+                            <li>BGN tel number and website</li>
+                        </ul>
+                        <p class="plan-price">€3000/monthly</p>
+                    </div>
+                    <p class="plan-back-button">< Back</p>
                 </div>
             </div>
         </div>
@@ -209,11 +277,11 @@
         <div class="contact-form-holder">
             <!-- title text -->
             <h1 data-i18n="contactUsTitle">Igniting business success in Bulgaria</h1>
-            <form class="contact-form">
-                <input class="half-input" type="text" placeholder="First Name">
-                <input class="half-input" type="text" placeholder="Name">
-                <input class="full-input" type="text" placeholder="Email">
-                <textarea rows="4" placeholder="Message..." ></textarea>
+            <form class="contact-form" method="post" action="./send-mail.php">
+                <input class="half-input" type="text" placeholder="First Name" name="fname">
+                <input class="half-input" type="text" placeholder="Last Name" name="lname">
+                <input class="full-input" type="text" placeholder="Email" name="email">
+                <textarea rows="4" placeholder="Message..." name="message"></textarea>
                 <input class="contact-form-submit" type="submit" value="Send Message">
             </form>
         </div>
