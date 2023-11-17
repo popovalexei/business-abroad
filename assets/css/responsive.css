@@ -8,30 +8,43 @@
     .benefits h1{
         font-size: 48px;
     }
+    .contact-form-holder{
+        max-width: 60%;
+    }
 }
 
 @media screen and (max-width: 991px) {
+    header{
+        position: relative;
+    }
     .header-nav-list{
         position: absolute;
         display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        right: 0;
-        top: 68px;
+        top: 113px;
+        left: 50%;
+        transform: translateX(-50%);
         height: unset;
-        background-color: black;
-        width: 30vw;
+        background-color: var(--c-primary);
+        width: 50vw;
         overflow-y: auto;
+        opacity: .8;
+        border-radius: 8px;
+        z-index: 100;
     }
     header.nav-open{
         overflow: unset;
     }
     header.nav-open .header-nav-list{
-        display: block
+        display: flex
     }
     .header-nav-list li a{
         padding: 12px;
+    }
+    .hamburger-icon-holder{
+        order: 1;
     }
     .hero-content h1{
         font-size: 48px;
@@ -47,6 +60,36 @@
         max-width: calc(50% - 40px);
         margin: 20px
     }
+    .packages-section-left, 
+    .packages-section-right{
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
+    .packages-section-left{
+        padding: 24px 0;
+    }
+    .section-services{
+        max-width: unset;
+        margin: 0;
+    }
+    .services-holder{
+        flex-wrap: wrap;
+    }
+    .services {
+        flex: 0 0 calc(100% - 60px);
+        max-width: calc(100% - 60px);
+        margin: 24px 30px
+    }
+    .services img{
+        max-height: 50vh;
+    }
+    .footer-part{
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    .section-title-bottom{
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -61,6 +104,19 @@
         max-width: calc(100% - 40px);
         margin: 20px 0
     }
+    .contact-form .half-input{
+        flex: 1 1 100%;
+        max-width: unset;
+    }
+    .footer{
+        padding: 24px
+    }
+    .contact-form-holder{
+        max-width: 80%;
+    }
+    .contact-form-holder h1{
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -68,7 +124,8 @@
         padding: 0;
     }
     .header-nav-list{
-        width: 100vw;
+        width: 80vw;
+        top: 65px;
     }
     .hero-content .hero-btn:nth-child(odd){
         margin-bottom: 15px;
@@ -87,6 +144,17 @@
     .benefits h1{
         font-size: 23px;
     }
+    .contact-form-holder h1{
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 468px){
+    .plan{
+        flex: 1 1 calc(100% - 40px);
+        max-width: calc(100% - 40px);
+        min-height: unset;
+    }
 }
 
 @media screen and (max-width: 420px){
@@ -99,5 +167,26 @@
     }
     .benefits h1{
         font-size: 17px;
+    }
+    .section-services h1{
+        font-size: 40px;
+    }
+    .services{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 24px 0;
+    }
+    .contact-form-holder h1{
+        font-size: 32px;
+    }
+    .footer-part-text{
+        font-size: 17px;
+    }
+    .packages-section-left h1{
+        padding: 0 12px;
+        text-align: center;
+    }
+    .hero-title-bottom{
+        margin-bottom: 70px;
     }
 }
