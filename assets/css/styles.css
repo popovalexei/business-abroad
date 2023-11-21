@@ -90,7 +90,8 @@ header{
 }
 .header-nav-list{
     display: flex;  
-    height: 64px
+    height: 64px;
+    margin-left: -95px
 }
 .header-nav-list li{
     height: 100%;
