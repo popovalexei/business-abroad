@@ -11,6 +11,9 @@
     .contact-form-holder{
         max-width: 60%;
     }
+    .section:not(.hero):not(.section-contact){
+        padding: 48px 0;
+    }
 }
 
 @media screen and (max-width: 991px) {
