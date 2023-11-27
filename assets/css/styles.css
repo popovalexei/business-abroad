@@ -33,7 +33,7 @@ a:hover{
     color: var(--c-primary)
 }
 .section{
-    padding: 24px;
+    padding: 64px 24px;
 }
 p{
     line-height: 26px;
@@ -48,6 +48,9 @@ h1{
 .hamburger-icon{
     height: 40px;
 }
+.section:not(.hero):not(.section-contact){
+    padding: 64px 96px;
+}
 
 /* Hero Section */
 
@@ -55,7 +58,7 @@ h1{
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 80vh;
     justify-content: space-between;
 }
 .hero-img{
@@ -200,7 +203,6 @@ header{
 /* Benefits Sections */
 
 .section.benefits{
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,7 +287,6 @@ header{
 .section-packages{
     display: flex;
     flex-wrap: wrap;
-    min-height: 100vh;
     padding: 0;
 }
 .packages-section-left,
@@ -401,7 +402,7 @@ header{
     flex: 1 1 100%;
     max-width: unset;
 }
-.expanded-content ul{
+.plan ul{
     font-size: 26px;
     list-style-type: disclosure-closed;
     color: var(--c-primary);
@@ -410,12 +411,12 @@ header{
     overflow-y: auto;
     padding-right: 12px;
 }
-.expanded-content ul::-webkit-scrollbar{
+.plan ul::-webkit-scrollbar{
     background-color: var(--c-primary-b);
     width: 8px;
     border-radius: 8px;
 }
-.expanded-content ul::-webkit-scrollbar-thumb{
+.plan ul::-webkit-scrollbar-thumb{
     background-color: var(--c-primary);
     border-radius: 8px;
     width: 8px;
@@ -426,6 +427,12 @@ header{
     color: var(--c-primary-b);
     font-weight: bold;
 }
+.compare-btn{
+    flex: 1 1 100%;
+    margin: 12px auto;
+    cursor: pointer;
+    width: 50%;
+}
 
 
 /* Services Section */
@@ -435,7 +442,6 @@ header{
     align-items: center;
     max-width: 80%;
     margin: 0 auto;
-    min-height: 100vh;
     padding: 48px 24px
 }
 .section-services h1{
@@ -457,11 +463,11 @@ header{
 }
 .services-holder{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 }
 .services{
-    flex: 0 0 calc(33.33333% - 60px);
+    flex: 1 1 calc(33.33333% - 60px);
     max-width: calc(33.33333% - 60px);
     margin: 0 30px;
     display: flex;
@@ -469,7 +475,10 @@ header{
 }
 .service-content{
     background-color: var(--c-primary);
-    padding: 12px
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .service-content *{
     text-align: center;
@@ -483,11 +492,11 @@ header{
 .service-content p{
     color: var(--c-text-white);
     font-size: 18px;
+    margin-top: auto;
 }
 
-/* Contacy Section */
-.section-contact{
-    min-height: 100vh;
+/* Contact Section */
+.section-contact{   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -575,13 +584,162 @@ header{
     color: var(--c-primary-b);
 }
 
+
+/* Compare Modal */
+
+.compare-modal-layer{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .9;
+    z-index: 1;
+}
+.compare-modal-opened{
+    overflow: hidden;
+}
+.compare-modal-opened .compare-modal-layer{
+    display: block;
+}
+
+.compare-modal{
+    display: none;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    overflow-y: auto;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #333333;
+    z-index: 2;
+}
+.compare-modal::-webkit-scrollbar{
+    background-color: var(--c-primary);
+    width: 8px;
+}
+.compare-modal::-webkit-scrollbar-thumb{
+    background-color: var(--c-primary-b);
+    width: 8px;
+    border-radius: 4px;
+}
+.compare-modal.opened{
+    display: flex;
+}
+.compare-modal-header{
+    flex: 1 1 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--c-primary);
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    height: 72px;
+}
+.compare-modal-header h1{
+    color: var(--c-primary-b);
+    margin: 0
+}
+.compare-close{
+    cursor: pointer;
+}
+.compare-modal .plans-holder{
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 24px 24px 0;
+    height: calc(100% - 72px);
+}
+.compare-modal .plan{
+    display: none;
+    height: calc(100% - 98px);
+}
+.plan-selector-left,
+.plan-selector-right{
+    position: relative;
+}
+.plan-selector-left ul,
+.plan-selector-right ul{
+    position: absolute;
+    top: 47px;
+    left: 12px;
+    width: calc(100% - 12px);
+    z-index: 1;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    display: none;
+}
+.plan-selector-left ul li,
+.plan-selector-right ul li{
+    padding: 12px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.plan-selector-left ul li:not(:last-child),
+.plan-selector-right ul li:not(:last-child){
+    border-bottom: 1px solid #cccccc;
+}
+.current-plan-left,
+.current-plan-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 12px;
+    border: 1px solid #333333;
+    padding: 5px;
+    min-width: 100px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.current-plan-left:after,
+.current-plan-right:after{
+    content: "";
+    background-image: url(../../images/icons/arrow-up.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-left: 7px;
+    transform: rotate(180deg);
+    transition: transform .5s;
+    filter: invert(1);
+}
+.current-plan-left.expanded + ul,
+.current-plan-right.expanded + ul{
+    display: block;
+}
+.kickstart-selected .plan.kickstart,
+.basic-selected .plan.basic,
+.full-selected .plan.full,
+.executive-selected .plan.executive{
+    display: flex;
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+
+
 /* Email messages */
 .email-handler{
     min-height: 100vh;
     height: 100vh;  
-  }
+}
   
-  .email-message-box{
+.email-message-box{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -592,33 +750,35 @@ header{
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 0 40px;
-  }
-  .success .email-message{
+}
+.success .email-message{
     font-size: 26px;
     color: greenyellow;
-  }
-  .fail .email-message{
+}
+.fail .email-message{
     font-size: 26px;
     color: #ea4655;
-  }
-  .email-message-link{
+}
+.email-message-link{
     padding: 10px;
     border: 1px solid #ffffff;
     font-size: 18px;
-  }
-  .email-alert{
+}
+.email-alert{
     font-size: 16px;
     margin-top: 10px;
     font-style: italic;
     color: #cccccc;
-  }
-  .email-handler-holder nav{
+}
+.email-handler-holder nav{
     justify-content: center;
-  }
-  .email-alert a{
+}
+.email-alert a{
     color:#ea4655;
     text-decoration: underline;
-  }
+}
+
+
 
 
 /* Scroll to top button*/

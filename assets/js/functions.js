@@ -78,3 +78,55 @@ planBackButton.map(item => {
     plansHolder.classList.remove("kickstart-opened","basic-opened","full-opened","executive-opened")
   })
 })
+
+
+// Compare Functionality
+
+  // Opening the modal
+
+  const compareBtn = document.getElementById("compare-btn");
+  const compareModal = document.getElementById("compare-modal");
+  const closeModal = document.getElementById("compare-close")
+
+  const openModal = () => {
+    compareModal.classList.add("opened");
+    body.classList.add("compare-modal-opened")
+  }
+
+  compareBtn.addEventListener("click", openModal);
+  closeModal.addEventListener("click", () => {
+    body.classList.remove("compare-modal-opened");
+    compareModal.classList.remove("opened");
+  })
+
+  // Opening the plans dropdown in the modal
+
+  const currPlanLeft = document.getElementById("current-plan-left");
+  const currPlanRight = document.getElementById("current-plan-right");
+
+  const currPlansArray = [currPlanLeft, currPlanRight];
+  currPlansArray.map(item => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("expanded");
+    })
+  })
+
+  // Adding the value from the selected item from the value to the current plan
+
+  const dropdownItemsLeft = Array.from(document.querySelectorAll(".plan-selector-left ul li"));
+  const dropdownItemsRight = Array.from(document.querySelectorAll(".plan-selector-right ul li"));
+  const planHolderLeft = document.getElementById("plans-holder-left");
+  const planHolderRight = document.getElementById("plans-holder-right");
+  
+  const setupDropdownItems = (items, targetHolder, targetElement, targetClass) => {
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+          targetHolder.classList = ["plans-holder", targetClass, `${item.innerHTML.toLowerCase()}-selected`].join(" ");
+          targetElement.textContent = item.innerHTML;
+          targetElement.classList.remove("expanded");
+        });
+    });
+};
+
+setupDropdownItems(dropdownItemsLeft, planHolderLeft, currPlanLeft, "left");
+setupDropdownItems(dropdownItemsRight, planHolderRight, currPlanRight, "right");

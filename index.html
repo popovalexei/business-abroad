@@ -227,6 +227,7 @@
                         < Back</p>
                 </div>
             </div>
+            <p id="compare-btn" class="hero-btn compare-btn">Compare</p>
         </div>
     </section>
 
@@ -309,6 +310,191 @@
             </div>
         </div>
     </section>
+
+    <div class="compare-modal-layer"></div>
+    
+    <div id="compare-modal" class="compare-modal">
+        <div class="compare-modal-header">
+            <h1>Compare Plans</h1>
+            <img class="compare-close" id="compare-close" src="./images/icons/close.svg" alt="close-button">
+        </div>
+        <div id="plans-holder-left" class="plans-holder left">
+            <p>Select a plan to compare</p>
+            <div class="plan-selector-left">
+                <p id="current-plan-left" class="current-plan-left">---</p>
+                <ul>
+                    <li>kickstart</li>
+                    <li>basic</li>
+                    <li>full</li>
+                    <li>executive</li>
+                </ul>
+            </div>
+            <!-- plan 1 -->
+            <div class="plan kickstart">
+                <h3 class="plan-title" data-i18n="planOneTitle">Kickstart</h3>
+                <p data-i18n="planOneText">Connect with experts: kickstart your business.</p>
+                <p>This plan includes:</p>
+                <ul>
+                    <li>Bringing in contact with lawyer</li>
+                    <li>Bringing in contact with accountant</li>
+                    <li>Bringing in contact with HR</li>
+                </ul>
+                <p class="plan-price">€1000</p>
+            </div>
+            <!-- plan 2 -->
+            <div class="plan basic">
+                <h3 class="plan-title" data-i18n="planTwoTitle">Basic</h3>
+                <p data-i18n="planTwoText">Comprehensive business setup: choose the basic package.</p>
+                <p>This plan includes:</p>
+                <ul>
+                    <li>Bringing in contact with lawyer</li>
+                    <li>Setting up company with lawyer</li>
+                    <li>Bringing in contact with accountant</li>
+                    <li>Bringing in contact with HR</li>
+                    <li>Contract with accountant</li>
+                    <li>Job interviews</li>
+                    <li>Opening bank account</li>
+                    <li>Vat registration</li>
+                    <li>Payroll services</li>
+                    <li>Guided trip</li>
+                </ul>
+                <p class="plan-price">€2000</p>
+            </div>
+            <!-- plan 3 -->
+            <div class="plan full">
+                <h3 class="plan-title" data-i18n="planThreeTitle">Full</h3>
+                <p data-i18n="planThreeText">All-inclusive business solutions: explore the full package.</p>
+                <p>This plan includes:</p>
+                <ul>
+                    <li>Bringing in contact with lawyer</li>
+                    <li>Setting up company with lawyer</li>
+                    <li>Bringing in contact with accountant</li>
+                    <li>Bringing in contact with HR</li>
+                    <li>Contract with accountant</li>
+                    <li>Job interviews</li>
+                    <li>Office space</li>
+                    <li>Opening bank account</li>
+                    <li>Vat registration</li>
+                    <li>Office material</li>
+                    <li>Payroll services</li>
+                    <li>Guided trip</li>
+                    <li>BGN tel number and website</li>
+                </ul>
+                <p class="plan-price">€3000</p>
+            </div>
+            <!-- plan 4 -->
+            <div class="plan executive">
+                <h3 class="plan-title" data-i18n="planFourTitle">Executive</h3>
+                <p data-i18n="planFourText">Premium business support: unlock executive benefits.</p>
+                <p>This plan includes:</p>
+                <ul>
+                    <li>Bringing in contact with lawyer</li>
+                    <li>Setting up company with lawyer</li>
+                    <li>Bringing in contact with accountant</li>
+                    <li>Bringing in contact with HR</li>
+                    <li>Contract with accountant</li>
+                    <li>Job interviews</li>
+                    <li>Office space</li>
+                    <li>Opening bank account</li>
+                    <li>Managing, temp, the company</li>
+                    <li>Vat registration</li>
+                    <li>Office material</li>
+                    <li>Payroll services</li>
+                    <li>Guided trip</li>
+                    <li>BGN tel number and website</li>
+                </ul>
+                <p class="plan-price">€3000/monthly</p>
+            </div>
+        </div>
+        <div id="plans-holder-right" class="plans-holder right">
+            <p>Select a plan to compare</p>
+            <div class="plan-selector-right">
+                <p id="current-plan-right" class="current-plan-right">---</p>
+                <ul>
+                    <li>kickstart</li>
+                    <li>basic</li>
+                    <li>full</li>
+                    <li>executive</li>
+                </ul>
+            </div>
+            <!-- plan 1 -->
+            <div class="plan kickstart">
+                <h3 class="plan-title" data-i18n="planOneTitle">Kickstart</h3>
+                <p data-i18n="planOneText">Connect with experts: kickstart your business.</p>
+                <p>This plan includes:</p>
+                <ul>
+                    <li>Bringing in contact with lawyer</li>
+                    <li>Bringing in contact with accountant</li>
+                    <li>Bringing in contact with HR</li>
+                </ul>
+                <p class="plan-price">€1000</p>
+            </div>
+            <!-- plan 2 -->
+            <div class="plan basic">
+                <h3 class="plan-title" data-i18n="planTwoTitle">Basic</h3>
+                <p data-i18n="planTwoText">Comprehensive business setup: choose the basic package.</p>
+                <p>This plan includes:</p>
+                <ul>
+                    <li>Bringing in contact with lawyer</li>
+                    <li>Setting up company with lawyer</li>
+                    <li>Bringing in contact with accountant</li>
+                    <li>Bringing in contact with HR</li>
+                    <li>Contract with accountant</li>
+                    <li>Job interviews</li>
+                    <li>Opening bank account</li>
+                    <li>Vat registration</li>
+                    <li>Payroll services</li>
+                    <li>Guided trip</li>
+                </ul>
+                <p class="plan-price">€2000</p>
+            </div>
+            <!-- plan 3 -->
+            <div class="plan full">
+                <h3 class="plan-title" data-i18n="planThreeTitle">Full</h3>
+                <p data-i18n="planThreeText">All-inclusive business solutions: explore the full package.</p>
+                <p>This plan includes:</p>
+                <ul>
+                    <li>Bringing in contact with lawyer</li>
+                    <li>Setting up company with lawyer</li>
+                    <li>Bringing in contact with accountant</li>
+                    <li>Bringing in contact with HR</li>
+                    <li>Contract with accountant</li>
+                    <li>Job interviews</li>
+                    <li>Office space</li>
+                    <li>Opening bank account</li>
+                    <li>Vat registration</li>
+                    <li>Office material</li>
+                    <li>Payroll services</li>
+                    <li>Guided trip</li>
+                    <li>BGN tel number and website</li>
+                </ul>
+                <p class="plan-price">€3000</p>
+            </div>
+            <!-- plan 4 -->
+            <div class="plan executive">
+                <h3 class="plan-title" data-i18n="planFourTitle">Executive</h3>
+                <p data-i18n="planFourText">Premium business support: unlock executive benefits.</p>
+                <p>This plan includes:</p>
+                <ul>
+                    <li>Bringing in contact with lawyer</li>
+                    <li>Setting up company with lawyer</li>
+                    <li>Bringing in contact with accountant</li>
+                    <li>Bringing in contact with HR</li>
+                    <li>Contract with accountant</li>
+                    <li>Job interviews</li>
+                    <li>Office space</li>
+                    <li>Opening bank account</li>
+                    <li>Managing, temp, the company</li>
+                    <li>Vat registration</li>
+                    <li>Office material</li>
+                    <li>Payroll services</li>
+                    <li>Guided trip</li>
+                    <li>BGN tel number and website</li>
+                </ul>
+                <p class="plan-price">€3000/monthly</p>
+            </div>
+        </div>
+    </div>
 
 
 
