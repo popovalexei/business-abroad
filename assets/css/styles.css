@@ -793,7 +793,7 @@ header{
     height: 40px;
     border: 3px solid var(--c-primary);
     background-color: #ffffff;
-    z-index: 100;
+    z-index: 0;
     justify-content: center;
     align-items: center;
     cursor: pointer;
