@@ -730,6 +730,9 @@ header{
     flex: 1 1 100%;
     max-width: 100%;
 }
+.compare-modal .plan-price{
+    margin-top: auto;
+}
 
 
 
