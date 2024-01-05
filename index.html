@@ -41,16 +41,13 @@
             <!-- Language changer -->
             <div class="language-change-holder">
                 <div id="curr-lang" class="current-language">
-                    <p>EN</p>
+                    <p id="selected-language">EN</p>
                 </div>
-                <!--<ul id="languages-list" class="languages-list">
-                    <li id="en-lang">
-                        <p>EN</p>
-                    </li>
-                    <li id="be-lang">
-                        <p>NL</p>
-                    </li>
-                </ul>-->
+                <ul id="languages-list" class="languages-list">
+                    <li id="en-lang" onclick="changeLanguage('EN')">EN</li>
+                    <li id="nl-lang" onclick="changeLanguage('NL')">NL</li>
+                    <li id="fr-lang" onclick="changeLanguage('FR')">FR</li>
+                </ul>
             </div>
         </header>
 
@@ -480,6 +477,8 @@
     <button id="scrollToTopButton" class="scroll-to-top">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
+
+    <script src="translations.js"></script>
     <script src="assets/js/functions.js"></script>
 </body>
 
