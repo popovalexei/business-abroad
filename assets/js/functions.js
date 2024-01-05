@@ -93,9 +93,9 @@ function closeDropdownOnClickOutside(event) {
 
 // Add a click event listener to the document body
 document.body.addEventListener('click', closeDropdownOnClickOutside);
-
 //!
 
+//!MOBILE TOGGLE MENU
 const toggleMobileMenu = () => {
   header.classList.toggle('nav-open');
 
@@ -106,18 +106,8 @@ const toggleMobileMenu = () => {
   }
 };
 
-// enLang.addEventListener("click", () => {
-//   currLangFlag.src = "images/flags/engl-flag.svg"
-// })
-
-// beLang.addEventListener("click", () => {
-//   currLangFlag.src = "images/flags/belg-flag.svg"
-// })
-
-// const toggleLangDropdown = () => {currlang.classList.toggle("expanded");}
-
 hamburger.addEventListener('click', toggleMobileMenu);
-// currlang.addEventListener("click", toggleLangDropdown);
+//!
 
 //! SCROLL-UP BUTTON functionality
 const scrollToTopButton = document.getElementById('scrollToTopButton');
@@ -139,8 +129,9 @@ window.addEventListener('scroll', () => {
     scrollToTopButton.style.display = 'none';
   }
 });
+//!
 
-// Inquire functionality
+//! INQUIRE PLANS functionality
 const plansHolder = document.getElementById('plans-holder');
 
 const inquireButtons = Array.from(
@@ -172,11 +163,10 @@ planBackButton.map((item) => {
     );
   });
 });
+//!
 
-// Compare Functionality
-
+//! COMPARE Functionality
 // Opening the modal
-
 const compareBtn = document.getElementById('compare-btn');
 const compareModal = document.getElementById('compare-modal');
 const closeModal = document.getElementById('compare-close');
@@ -236,3 +226,4 @@ const setupDropdownItems = (
 
 setupDropdownItems(dropdownItemsLeft, planHolderLeft, currPlanLeft, 'left');
 setupDropdownItems(dropdownItemsRight, planHolderRight, currPlanRight, 'right');
+//!
